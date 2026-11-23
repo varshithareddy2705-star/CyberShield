@@ -1,0 +1,243 @@
+
+/* CYBERSHIELD - LOGIN PAGE */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px;
+  background: #080b16;
+  color: #f5f7ff;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.background-glow {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: #5635d8;
+  opacity: 0.16;
+  filter: blur(150px);
+  border-radius: 50%;
+  top: -250px;
+  left: -150px;
+  pointer-events: none;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+  padding: 42px;
+  border: 1px solid rgba(130, 145, 190, 0.18);
+  border-radius: 20px;
+  background: rgba(17, 23, 42, 0.88);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  margin-bottom: 48px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: white;
+  font-size: 30px;
+  background: linear-gradient(135deg, #367bff, #933bff);
+  box-shadow: 0 0 25px rgba(105, 75, 255, 0.35);
+}
+
+.blue-text {
+  color: #728dff;
+}
+
+.login-heading {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: #8297ff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.login-heading h1 {
+  font-size: 34px;
+  letter-spacing: -1.5px;
+  margin: 12px 0;
+}
+
+.login-heading p {
+  color: #929bb2;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 23px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 9px;
+  color: #dce2f3;
+}
+
+.form-group input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #303b59;
+  border-radius: 9px;
+  outline: none;
+  background: #0d1325;
+  color: white;
+  font-size: 14px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #6684ff;
+  box-shadow: 0 0 0 3px rgba(102, 132, 255, 0.12);
+}
+
+.form-group input::placeholder {
+  color: #68738c;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  bottom: 13px;
+  border: none;
+  background: transparent;
+  color: #8297ff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 5px 0 27px;
+  font-size: 12px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #aab3c9;
+}
+
+.remember input {
+  accent-color: #7188ff;
+}
+
+.form-options a {
+  color: #8297ff;
+  text-decoration: none;
+}
+
+.form-options a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  height: 49px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(100deg, #386cff, #8146ed);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(91, 92, 255, 0.3);
+}
+
+.success-message {
+  color: #73e5ad;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.security-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #77839e;
+  font-size: 11px;
+  margin-top: 34px;
+}
+
+.security-note span {
+  color: #8297ff;
+}
+
+footer {
+  text-align: center;
+  color: #56617b;
+  font-size: 10px;
+  margin-top: 32px;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 22px;
+  }
+
+  .login-heading h1 {
+    font-size: 29px;
+  }
+}
+.forgot-password-link,
+.back-to-login {
+  background: none;
+  border: none;
+  color: #60a5fa;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  padding: 0;
+}
+
+.forgot-password-link:hover,
+.back-to-login:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.back-to-login {
+  display: block;
+  margin: 20px auto 0;
+}

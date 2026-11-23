@@ -1,0 +1,271 @@
+.settings-layout {
+  min-height: 100vh;
+  background: #080b16;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.settings-page {
+  margin-left: 250px;
+  min-height: 100vh;
+  padding: 45px 38px;
+  box-sizing: border-box;
+  background: #080b16;
+  color: #f4f6ff;
+  font-family: inherit;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+  gap: 20px;
+}
+
+.settings-eyebrow {
+  color: #8296ff;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.settings-header h1 {
+  font-size: 42px;
+  margin: 15px 0;
+}
+
+.settings-header span {
+  color: #929db5;
+}
+
+.settings-status {
+  color: #48dda8;
+  font-weight: 600;
+}
+
+.settings-status span {
+  color: #48dda8;
+  margin-right: 8px;
+}
+
+.settings-card {
+  background: #111a2e;
+  border: 1px solid #293957;
+  border-radius: 18px;
+  padding: 32px;
+  margin-bottom: 25px;
+}
+
+.settings-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.settings-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #3868ff, #873df1);
+  font-size: 25px;
+}
+
+.settings-section-heading h2,
+.logout-card h2 {
+  margin: 0 0 8px;
+  font-size: 23px;
+}
+
+.settings-section-heading p,
+.logout-card p {
+  margin: 0;
+  color: #929db5;
+}
+
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-field label {
+  color: #cbd4e8;
+  font-weight: 600;
+}
+
+.settings-field input,
+.settings-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #344466;
+  background: #0c1325;
+  color: #f4f6ff;
+  font-size: 15px;
+  outline: none;
+}
+
+.settings-field input:focus,
+.settings-field select:focus {
+  border-color: #6381ff;
+}
+
+.settings-field input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.settings-primary-button {
+  padding: 14px 25px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(110deg, #3868ff, #843df0);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.settings-primary-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.settings-options {
+  margin-bottom: 25px;
+}
+
+.settings-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #283653;
+}
+
+.settings-option h3,
+.settings-password-info h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+}
+
+.settings-option p,
+.settings-password-info p {
+  margin: 0;
+  color: #929db5;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.settings-option input {
+  width: 19px;
+  height: 19px;
+  accent-color: #7555ff;
+  cursor: pointer;
+}
+
+.session-field {
+  max-width: 350px;
+  margin-bottom: 25px;
+}
+
+.settings-password-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.coming-soon {
+  color: #a995ff;
+  background: #28204b;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.logout-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.settings-logout-button {
+  padding: 13px 25px;
+  border: 1px solid #a43d5c;
+  background: #401d30;
+  color: #ff819d;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-logout-button:hover {
+  background: #57243b;
+}
+
+.settings-message {
+  background: #103a32;
+  border: 1px solid #267c66;
+  color: #55e5b3;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.settings-footer {
+  text-align: center;
+  color: #66748f;
+  padding: 25px 0;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .settings-page {
+    padding: 30px 20px;
+  }
+
+  .settings-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-header h1 {
+    font-size: 32px;
+  }
+
+  .settings-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-card {
+    padding: 22px;
+  }
+
+  .logout-card,
+  .settings-password-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  @media (max-width: 700px) {
+  .settings-page {
+    margin-left: 190px;
+    padding: 25px 15px;
+  }
+}
+}
