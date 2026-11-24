@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import Login from './pages/Login'
+import Register from './pages/Register'
 import ResetPassword from './pages/ResetPassword'
 import Dashboard from './pages/Dashboard'
 import Scanner from './pages/Scanner'
@@ -21,36 +22,58 @@ function App() {
     <BrowserRouter>
       <Routes>
 
+        {/* Default route */}
         <Route path="/" element={<Navigate to="/login" replace />} />
 
         {/* Public routes */}
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/reset-password" element={<ResetPassword />} />
 
         {/* Protected routes */}
         <Route
           path="/dashboard"
-          element={<ProtectedRoute><Dashboard /></ProtectedRoute>}
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/scanner"
-          element={<ProtectedRoute><Scanner /></ProtectedRoute>}
+          element={
+            <ProtectedRoute>
+              <Scanner />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/history"
-          element={<ProtectedRoute><History /></ProtectedRoute>}
+          element={
+            <ProtectedRoute>
+              <History />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/incidents"
-          element={<ProtectedRoute><Incidents /></ProtectedRoute>}
+          element={
+            <ProtectedRoute>
+              <Incidents />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/settings"
-          element={<ProtectedRoute><Settings /></ProtectedRoute>}
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
         />
 
         {/* Unknown routes */}

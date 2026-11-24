@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import axios from 'axios'
+import { API_URL } from '../config'
 import Sidebar from '../components/Sidebar'
 import '../Scanner.css'
 
@@ -19,7 +20,7 @@ function Scanner() {
 
     try {
       const response = await axios.post(
-        'http://localhost:5002/api/scan',
+        `${API_URL}/scan`,
         { url: url.trim() }
       )
 

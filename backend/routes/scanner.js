@@ -86,25 +86,29 @@ router.post('/scan', async (req, res) => {
     level = 'Medium'
   }
 try {
-  const savedScan = await prisma.scan.create({
-    data: {
-      url: url.trim(),
-      hostname,
-      score,
-      level,
-      findings
-    }
-  })
-
-  res.status(201).json({
-    id: savedScan.id,
+  
+const savedScan = await prisma.scan.create({
+  data: {
     url: url.trim(),
     hostname,
     score,
     level,
     findings,
-    message: 'URL analysis completed and saved successfully.'
-  })
+    userId: req.user.userId
+  }
+})
+
+res.status(201).json({
+  id: savedScan.id,
+  url: savedScan.url,
+  hostname: savedScan.hostname,
+  score: savedScan.score,
+  level: savedScan.level,
+  findings: savedScan.findings,
+  createdAt: savedScan.createdAt,
+  message: 'URL analysis completed and saved successfully.'
+})
+
 
 } catch (error) {
   console.error('Database error:', error)

@@ -4,7 +4,7 @@ import axios from 'axios'
 import Sidebar from '../components/Sidebar'
 import '../History.css'
 
-const API_URL = 'http://localhost:5002/api'
+import { API_URL } from '../config';
 
 function History() {
   const [scans, setScans] = useState([])
@@ -12,18 +12,28 @@ function History() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
-  async function fetchScans() {
-    try {
-      setError('')
-      const response = await axios.get(`${API_URL}/scans`)
-      setScans(response.data)
-    } catch (err) {
-      console.error('Error fetching scans:', err)
-      setError('Unable to load scan history. Please try again.')
-    } finally {
-      setLoading(false)
-    }
+  
+async function fetchScans() {
+  try {
+    setError('')
+
+    const token = localStorage.getItem('cybershieldToken')
+
+    const response = await axios.get(`${API_URL}/scans`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+
+    setScans(response.data)
+  } catch (err) {
+    console.error('Error fetching scans:', err)
+    setError('Unable to load scan history. Please try again.')
+  } finally {
+    setLoading(false)
   }
+}
+
 
   useEffect(() => {
     fetchScans()

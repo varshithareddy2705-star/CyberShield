@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { API_URL } from '../config'
 import '../Dashboard.css'
 import Analytics from './Analytics'
 import Sidebar from '../components/Sidebar'
@@ -18,8 +19,8 @@ function Dashboard() {
     async function loadDashboard() {
       try {
         const [scanResponse, incidentResponse] = await Promise.all([
-          axios.get('http://localhost:5002/api/scans'),
-          axios.get('http://localhost:5002/api/incidents')
+          axios.get(`${API_URL}/scans`),
+          axios.get(`${API_URL}/incidents`)
         ])
 
         setScans(scanResponse.data)

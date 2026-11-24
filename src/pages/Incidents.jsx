@@ -4,7 +4,7 @@ import axios from 'axios'
 import Sidebar from '../components/Sidebar'
 import '../Incidents.css'
 
-const API_URL = 'http://localhost:5002/api'
+import { API_URL } from '../config';
 
 const initialForm = {
   title: '',
